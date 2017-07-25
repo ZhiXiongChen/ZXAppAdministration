@@ -13,6 +13,10 @@
 		C9AB5C471F2723A700349E0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB5C451F2723A700349E0C /* Main.storyboard */; };
 		C9AB5C491F2723A700349E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AB5C481F2723A700349E0C /* Assets.xcassets */; };
 		C9AB5C4C1F2723A700349E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AB5C4A1F2723A700349E0C /* LaunchScreen.storyboard */; };
+		C9AB5C591F27248C00349E0C /* apps_full.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9AB5C581F27248C00349E0C /* apps_full.plist */; };
+		C9AB5C5C1F27252600349E0C /* ZXApp.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AB5C5B1F27252600349E0C /* ZXApp.m */; };
+		C9AB5C5F1F2727B200349E0C /* AppListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AB5C5E1F2727B200349E0C /* AppListTableViewController.m */; };
+		C9AB5C621F27352F00349E0C /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AB5C611F27352F00349E0C /* AppCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		C9AB5C481F2723A700349E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9AB5C4B1F2723A700349E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9AB5C4D1F2723A700349E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9AB5C581F27248C00349E0C /* apps_full.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps_full.plist; sourceTree = "<group>"; };
+		C9AB5C5A1F27252600349E0C /* ZXApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXApp.h; sourceTree = "<group>"; };
+		C9AB5C5B1F27252600349E0C /* ZXApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXApp.m; sourceTree = "<group>"; };
+		C9AB5C5D1F2727B200349E0C /* AppListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListTableViewController.h; sourceTree = "<group>"; };
+		C9AB5C5E1F2727B200349E0C /* AppListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListTableViewController.m; sourceTree = "<group>"; };
+		C9AB5C601F27352F00349E0C /* AppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCell.h; sourceTree = "<group>"; };
+		C9AB5C611F27352F00349E0C /* AppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +69,10 @@
 		C9AB5C3B1F2723A700349E0C /* ZXAppAdministration */ = {
 			isa = PBXGroup;
 			children = (
-				C9AB5C3F1F2723A700349E0C /* AppDelegate.h */,
-				C9AB5C401F2723A700349E0C /* AppDelegate.m */,
-				C9AB5C421F2723A700349E0C /* ViewController.h */,
-				C9AB5C431F2723A700349E0C /* ViewController.m */,
-				C9AB5C451F2723A700349E0C /* Main.storyboard */,
-				C9AB5C481F2723A700349E0C /* Assets.xcassets */,
-				C9AB5C4A1F2723A700349E0C /* LaunchScreen.storyboard */,
-				C9AB5C4D1F2723A700349E0C /* Info.plist */,
+				C9AB5C571F2723CF00349E0C /* Views */,
+				C9AB5C551F2723C400349E0C /* Others */,
+				C9AB5C541F2723BD00349E0C /* Models */,
+				C9AB5C561F2723C900349E0C /* Controllers */,
 				C9AB5C3C1F2723A700349E0C /* Supporting Files */,
 			);
 			path = ZXAppAdministration;
@@ -75,8 +82,51 @@
 			isa = PBXGroup;
 			children = (
 				C9AB5C3D1F2723A700349E0C /* main.m */,
+				C9AB5C581F27248C00349E0C /* apps_full.plist */,
+				C9AB5C481F2723A700349E0C /* Assets.xcassets */,
+				C9AB5C4D1F2723A700349E0C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9AB5C541F2723BD00349E0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB5C5A1F27252600349E0C /* ZXApp.h */,
+				C9AB5C5B1F27252600349E0C /* ZXApp.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C9AB5C551F2723C400349E0C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB5C3F1F2723A700349E0C /* AppDelegate.h */,
+				C9AB5C401F2723A700349E0C /* AppDelegate.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		C9AB5C561F2723C900349E0C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB5C421F2723A700349E0C /* ViewController.h */,
+				C9AB5C431F2723A700349E0C /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C9AB5C571F2723CF00349E0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9AB5C4A1F2723A700349E0C /* LaunchScreen.storyboard */,
+				C9AB5C451F2723A700349E0C /* Main.storyboard */,
+				C9AB5C5D1F2727B200349E0C /* AppListTableViewController.h */,
+				C9AB5C5E1F2727B200349E0C /* AppListTableViewController.m */,
+				C9AB5C601F27352F00349E0C /* AppCell.h */,
+				C9AB5C611F27352F00349E0C /* AppCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +190,7 @@
 				C9AB5C4C1F2723A700349E0C /* LaunchScreen.storyboard in Resources */,
 				C9AB5C491F2723A700349E0C /* Assets.xcassets in Resources */,
 				C9AB5C471F2723A700349E0C /* Main.storyboard in Resources */,
+				C9AB5C591F27248C00349E0C /* apps_full.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AB5C441F2723A700349E0C /* ViewController.m in Sources */,
+				C9AB5C5C1F27252600349E0C /* ZXApp.m in Sources */,
 				C9AB5C411F2723A700349E0C /* AppDelegate.m in Sources */,
+				C9AB5C621F27352F00349E0C /* AppCell.m in Sources */,
 				C9AB5C3E1F2723A700349E0C /* main.m in Sources */,
+				C9AB5C5F1F2727B200349E0C /* AppListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
